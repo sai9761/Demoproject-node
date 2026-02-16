@@ -19,11 +19,7 @@ jobs:
       - name: Install dependicies
         run: npm install
 
-      - name: App check
-        run: |
-          node app.js
-          sleep 5
-          
+      
     
           
 

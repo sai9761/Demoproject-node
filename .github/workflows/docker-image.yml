@@ -21,13 +21,7 @@ jobs:
           node app.js &
           sleep 10
      
-      
-      - name: Building Docker Image
-        run: docker build -t node-js-app .
-
-        
-      - name: verify Docker Image
-        run: docker images
+     
     
           
 

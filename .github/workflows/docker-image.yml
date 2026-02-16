@@ -10,4 +10,7 @@ jobs:
     steps:
       - name: Setup Node.js environment
         uses: actions/setup-node@v6.2.0
+      - name: GitHub Leaks Installation
+        run: sudo apt install gitleaks -y
+        
      

@@ -25,7 +25,7 @@ jobs:
         run: sudo apt install gitleaks -y
 
       - name: Gitleaks Running
-        run: gitleaks detect score . -r gitleaks-report.json
+        run: gitleaks detect score . -r gitleaks-report.json -f json
 
   
     

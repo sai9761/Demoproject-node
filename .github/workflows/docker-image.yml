@@ -22,7 +22,7 @@ jobs:
           sleep 10
 
       - name: Gitleaks Installation
-        run: sudo apt instal gileaks -y
+        run: sudo apt install gileaks -y
 
       - name: Gitleaks Running
         run: gitleaks detect score . -r gitleaks-report.json

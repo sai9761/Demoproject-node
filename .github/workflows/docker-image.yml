@@ -44,7 +44,7 @@ jobs:
          uses: docker/build-push-action@v7
          with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/demo-app/${github.run_id}
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/demo-app:${{github.run_id}}
 
  
 

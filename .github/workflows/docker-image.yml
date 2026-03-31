@@ -30,8 +30,21 @@ jobs:
        - name: Set-up-docker
          uses: docker/setup-docker-action@v5
          with:
-            username: ${{ vars.DOCKERHUB_USERNAME }}
+            username: ${{ secrets.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+
+  docker-push:
+     needs: build-docker
+     runs-on: ubuntu-latest
+
+
+     steps:
+       - name: Build and push
+         uses: docker/build-and-push@v7
+         with:
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/demo-app/${github.run_id}
 
  
 

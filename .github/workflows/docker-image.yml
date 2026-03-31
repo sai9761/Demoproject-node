@@ -43,6 +43,7 @@ jobs:
        - name: Build and push
          uses: docker/build-and-push@v7
          with:
+          context: /app.js
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/demo-app/${github.run_id}
 

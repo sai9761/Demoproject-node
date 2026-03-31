@@ -33,16 +33,7 @@ jobs:
             username: ${{ vars.DOCKERHUB_USERNAME }}
             password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-  push-docker:
-     needs: build-docker
-     runs-on: ubuntu-latest
-
-     steps:
-       - name: Build and Push Docker Image
-         uses: docker/build-push-action@v7
-         with:
-           push: true
-           tags: sai9761/demo-app26:latest
+ 
 
            
 

@@ -29,6 +29,10 @@ jobs:
 
        - name: Set-up-docker
          uses: docker/setup-docker-action@v5
+         with:
+            username: ${{ vars.DOCKERHUB_USERNAME }}
+            password: ${{ secrets.DOCKERHUB_TOKEN }}
+
 
         
   

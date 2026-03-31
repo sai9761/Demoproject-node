@@ -42,7 +42,7 @@ jobs:
          uses: docker/build-push-action@v7
          with:
            push: true
-           tag: sai9761/demo-app26:latest
+           tags: sai9761/demo-app26:latest
 
            
 
